@@ -37,37 +37,37 @@ An IoT-enabled health monitoring system designed to measure and transmit heart r
 
 🧰 Circuit Connections
   Arduino UNO:
-  PulseSensor → A0
-  
-  LM35 → A1
-  
-  ESP8266 Rx/Tx → D2/D3 (via SoftwareSerial)
-  
-  LCD → 8-bit/4-bit mode (D4–D7 + RS/EN)
-  
-  Potentiometer → LCD Contrast (V0 pin)
+    PulseSensor → A0
+    
+    LM35 → A1
+    
+    ESP8266 Rx/Tx → D2/D3 (via SoftwareSerial)
+    
+    LCD → 8-bit/4-bit mode (D4–D7 + RS/EN)
+    
+    Potentiometer → LCD Contrast (V0 pin)
   
   ESP8266:
-  VCC & CH_PD → 3.3V
-  
-  GND → GND
-  
-  TX → Arduino D2
-  
-  RX → Arduino D3 (with voltage divider)
+    VCC & CH_PD → 3.3V
+    
+    GND → GND
+    
+    TX → Arduino D2
+    
+    RX → Arduino D3 (with voltage divider)
   
   ☁️ ThingSpeak Configuration
-  Create a ThingSpeak account: https://thingspeak.com
+    Create a ThingSpeak account: https://thingspeak.com
+    
+    Create a new channel with two fields:
+    
+    Field 1: BPM
+    
+    Field 2: Temperature
+    
+    Note your Channel ID and Write API Key
   
-  Create a new channel with two fields:
-  
-  Field 1: BPM
-  
-  Field 2: Temperature
-  
-  Note your Channel ID and Write API Key
-  
-  Configure ESP8266 code to send data using HTTP GET requests.
+    Configure ESP8266 code to send data using HTTP GET requests.
 
 📋 How to Use
   Power up the system via USB or external 5V source.
